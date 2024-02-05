@@ -10,12 +10,6 @@ REM Ici, on peut forcer des dossiers à utiliser les serveurs DFS.
 REM IF %NUMCMD% EQU 71413 SET DFS=OUI
 IF %NUMCMD% EQU 78070 SET DFS=OUI
 
-
-
-
-
-
-
 rem=========================================================================== 
 rem  MODEL
 rem===========================================================================
@@ -27,25 +21,6 @@ rem  REPETITIF
 rem===========================================================================
 
 ::IF "%MODE%" EQU "DEV" IF %NUMCMD% EQU 71413 SET MODE_COMMUN=WIP
-::IF "%MODE%" EQU "DEV" IF %NUMCMD% EQU 71654 SET MODE_COMMUN=WIP
-::IF "%MODE%" EQU "DEV" IF %NUMCMD% EQU 73170 SET MODE_COMMUN=WIP
-::CIFEA - SOPREDA
-    ::IF "%MODE%" EQU "PROD" IF %NUMCMD% EQU 77575 SET MODE_COMMUN=WIP
-::CIFEA - VIVASON
-    ::IF %NUMCMD% EQU 77570 SET MODE_COMMUN=WIP
-
-::IF "%MODE%" EQU "TEST" IF %NUMCMD% EQU 75636 SET MODE_COMMUN=WIP
-
-::JRMC
-IF "%MODE%" EQU "TEST" IF %NUMCMD% EQU 73173 SET MODE_COMMUN=WIP
-::QIS
-IF "%MODE%" EQU "TEST" IF %NUMCMD% EQU 75595 SET MODE_COMMUN=WIP
-::REXROTARY2
-IF "%MODE%" EQU "TEST" IF %NUMCMD% EQU 73773 SET MODE_COMMUN=WIP
-::Michelin_CC6_Massification
-IF "%MODE%" EQU "TEST" IF %NUMCMD% EQU 73304 SET MODE_COMMUN=WIP
-::TEST MILEE
-IF %NUMCMD% EQU 77602 SET MODE_COMMUN=WIP
 
 rem=========================================================================== 
 rem  REPETITIF DEV et TEST
@@ -57,11 +32,7 @@ rem===========================================================================
 rem  PONCTUEL
 rem===========================================================================
 
-:: LCL 
-IF %NUMCMD% EQU 77625 SET MODE_COMMUN=WIP
-
-:: CIFEA WILLS TOWERS (REDUCTION PDF + CREATION .JS)
-IF %NUMCMD% EQU 77454 SET MODE_COMMUN=WIP
+::IF "%MODE%" EQU "DEV" IF %NUMCMD% EQU 72805 SET MODE_COMMUN=WIP
 
 rem=========================================================================== 
 rem  Chaine de test
@@ -69,16 +40,6 @@ rem===========================================================================
 rem Chaine de test dans v:\_Communs_Traitements\Outils\TEST_Traitement\TEST_Traitement\CMDE_77431
 
 IF %NUMCMD% EQU 77431 SET MODE_COMMUN=WIP
-
-::IF %NUMCMD% EQU 77589 SET MODE_COMMUN=WIP
-    
-::IF %NUMCMD% EQU 77606 SET MODE_COMMUN=WIP
-
-::IF %NUMCMD% EQU 77467 SET MODE_COMMUN=WIP
-
-
-::IF %MODE% EQU TEST IF %NUMCMD% EQU 71941 SET MODE_COMMUN=WIP
-::IF %TYPE_TRAIT% EQU REPORTING IF %NUMCMD% EQU 72805 SET MODE_COMMUN=WIP
 
 rem=========================================================================== 
 rem  Chaine utilisant les serveurs DFS

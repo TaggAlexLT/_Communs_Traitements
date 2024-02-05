@@ -1,0 +1,8 @@
+*.orig
+*.bak
+BAK
+.vscode/
+WIP/
+PROD/
+RECETTE/
+BASCULE_AUTO_COMMUN/

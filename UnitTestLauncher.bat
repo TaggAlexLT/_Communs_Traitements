@@ -1,0 +1,13 @@
+EXIT /B 0
+SETLOCAL EnableDelayedExpansion
+    CD /D V:\_Communs_Traitements
+    CALL Variables_Serveurs.bat
+    SET REPERTOIRE_TEST_BSLASH=%~1
+    SET REPERTOIRE_TEST=%REPERTOIRE_TEST_BSLASH:/=\%
+    SET LECTEUR_REPJOUR=!REPERTOIRE_TEST:%SERVER_SOURCE%=%LECTEUR_SERVEUR_SOURCE%!
+    FOR %%i IN (%LECTEUR_REPJOUR:\= %) DO SET MODE=%%i
+    SET REPERTOIRE_UNITTEST=V:\_Communs_Traitements\ValidationCommun\UnitTest\%MODE%
+    CD /D %REPERTOIRE_UNITTEST%
+    CALL LaunchAll.bat || EXIT /B 1
+ENDLOCAL
+EXIT /B 0
